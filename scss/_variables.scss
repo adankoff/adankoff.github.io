@@ -1,0 +1,86 @@
+// Colors
+// -------------------------
+
+$brand : #e46a5d;
+$brand-light: #6ebec5;
+$white : #fff;
+$grey : #242b3b;
+
+// Font colors
+// -------------------------
+$body-bg-color 	: $brand;
+$body-color 	: $grey;
+$title-color	: $grey;
+
+$link-color       : $brand;
+$link-decoration : none ;
+$link-hover-color : $link-color;
+$link-hover-decoration: underline;
+
+// Typography
+// -------------------------
+$font-family: "Open Sans", Futura, Helvetica, Arial, sans-serif;
+$font-family-title: "Open Sans";
+$font-family-sub-title: "Open Sans";
+
+$font-size: 16px;
+$line-height: 1.2;
+
+// Titles
+$font-size-h1: 46px;
+$font-size-h2: 24px;
+$font-size-h3: 16px;
+$title-transform: none;
+$title-letter-spacing: 2px;
+$title-font-weight: 100;
+
+// Menu
+$menu-padding: 10px 0px;
+$menu-font-family: $font-family-title;
+$menu-font-size: 13px;
+
+$menu-item-padding:  10px 0px;
+$menu-item-transform: uppercase;
+$menu-item-letter-spacing: $title-letter-spacing;
+$menu-item-font-weight: 100;
+
+$menu-item-color: $white;
+$menu-item-background: transparent;
+$menu-item-decoration: none;
+
+$menu-item-hover-color: $white;
+$menu-item-hover-background: transparent;
+$menu-item-hover-decoration: none;
+
+// Grid
+// -------------------------
+// Breakpoints
+$screen-sm-min : 768px;
+$screen-sm-max : ($screen-sm-min - 1) ;
+$screen-md-min : 1024px;
+$screen-md-max : ($screen-md-min - 1) ;
+$screen-lg-min : 1220px;
+$screen-lg-max : ($screen-lg-min - 1) ;
+
+// Columns
+$grid-columns: 12;
+$padding: 20px;
+$screen-md-max-padding: 10px;
+
+$padding-grid: 15px;
+$padding-content: 15px;
+
+
+// Componets
+// ---------------------------
+// Border radius
+$border-radius-base:        0;
+$border-radius-large:       0;
+$border-radius-small:       0;
+
+// Sidebar
+$sidebar-size:        220px;
+
+//Transitions
+$transition: all 0.5s;
+

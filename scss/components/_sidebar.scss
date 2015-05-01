@@ -1,0 +1,219 @@
+
+// Sidebar
+// --------------------------------------------------
+
+#navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  padding: $padding;
+  height:100%;
+  background: $brand;
+  list-style: none;
+  transition: all 0.5s;
+  z-index:99;
+  .menu-toggle {
+    opacity:0;
+    width:0px;
+    height:0px;
+    transition: all 0.5s;
+  }
+  h1 {
+    background: $brand center center no-repeat;
+    background-size: contain;
+    width:150px;
+    height:150px;
+    text-indent: -9999px;
+    margin-top: 0px;
+  }
+  #menu-main,
+  .icon-menu {
+    list-style: none;
+    li {
+      float:left;
+      width:100%;
+      a {
+        float:left;
+        width:100%;
+        position: relative;
+        cursor: pointer;
+        color: $white;
+      }
+    }
+  }
+  #menu-main {
+    a {
+      &:after {
+        position: absolute;
+        top:center;
+        right:0px;
+        content: '>';
+        transition: right 0.5s;
+      }
+      &:hover:after {
+        right:-5px;
+      }
+    }
+  }
+  .icon-menu {
+    li {
+      width:25%;
+      height:32px;
+      font-size: 22px;
+      text-align: center;
+      margin-bottom: 20px;
+      .houzz {
+        background: url(../img/houzz.png) center center no-repeat;
+        height: 25px;
+        background-size: contain;
+      }
+    }
+  }
+  @media (max-width: $screen-md-max) {
+    position:fixed;
+    float:left;
+    width:100%;
+    height: 60px;
+    padding:0px;
+    z-index:9;
+
+    // vars
+
+    $button-width: 60px;
+    $button-height: 60px;
+    $bar-thickness: 2px;
+    $button-pad: 18px;
+    $button-trans-delay: 0.3s;
+
+    .menu-toggle {
+      opacity:1;
+      display: block;
+      position: relative;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      width: $button-width;
+      height: $button-height;
+      font-size: 0;
+      text-indent: -9999px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      box-shadow: none;
+      border-radius: none;
+      border: none;
+      cursor: pointer;
+      transition: background $button-trans-delay;
+    }
+
+    .menu-toggle:focus {
+      outline: none;
+    }
+
+    .menu-toggle span {
+      display: block;
+      position: absolute;
+      top: ($button-height / 2) - ($bar-thickness / 2);
+      left: $button-pad;
+      right: $button-pad;
+      height: $bar-thickness;
+      background: $white;
+    }
+
+    .menu-toggle span::before,
+    .menu-toggle span::after {
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 100%;
+      height: $bar-thickness;
+      background-color: #fff;
+      content: "";
+    }
+
+    .menu-toggle span::before {
+      top: -(($button-height / 2) - ($bar-thickness / 2) - $button-pad);
+    }
+
+    .menu-toggle span::after {
+      bottom: -(($button-height / 2) - ($bar-thickness / 2) - $button-pad);
+    }
+
+    .menu-effect {
+      background-color: $brand;
+    }
+
+    .menu-effect span {
+      transition: transform $button-trans-delay;
+    }
+
+    .menu-effect span::before,
+    .menu-effect span::after {
+      
+    }
+
+    .menu-effect span::before {
+      transform-origin: top right;
+      transition: transform $button-trans-delay, width $button-trans-delay, top $button-trans-delay;
+    }
+
+    .menu-effect span::after {
+      transform-origin: bottom right;
+      transition: transform $button-trans-delay, width $button-trans-delay, bottom $button-trans-delay;
+    }
+
+    /* active state, i.e. menu open */
+
+    .menu-effect.active {
+      background-color: darken($brand, 20%);
+    }
+
+    .menu-effect.active span {
+      transform: rotate(180deg);
+    }
+
+    .menu-effect.active span::before,
+    .menu-effect.active span::after {
+      width: 50%;
+    }
+
+    .menu-effect.active span::before {
+      top: 0;
+      transform: translateX($button-width/2 - $button-pad + $bar-thickness) translateY($bar-thickness/2) rotate(45deg);
+    }
+
+    .menu-effect.active span::after {
+      bottom: 0;
+      transform: translateX($button-width/2 - $button-pad + $bar-thickness) translateY(-$bar-thickness/2) rotate(-45deg);
+    }
+
+
+    h1 {
+      float: left;
+      width: 150px;
+      height: 60px;
+    }
+    .slide {
+      position: fixed;
+      left: -150px;
+      top: 0px;
+      bottom: 0;
+      right: 0;
+      z-index: 9;
+      width: 150px;
+      padding: $padding;
+      padding-top:79px;
+      height:100%;
+      background: $brand;
+      list-style: none;
+      transition: all 0.5s;
+      &.active {
+        left:0px;
+      }
+    }
+
+  }
+}

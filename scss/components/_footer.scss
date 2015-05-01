@@ -1,0 +1,22 @@
+#footer {
+    position: absolute;
+    bottom: 0px;
+    left:0px;
+    height: 60px;
+    background: $brand;
+    padding: $padding;
+    width: 100%;
+    transition: all 0.5s;
+    color: $white;
+    a {
+        color: $white;
+        text-decoration: underline;
+    }
+    @media (max-width: $screen-md-max) {
+        font-size:12px;
+        padding: $screen-md-max-padding;
+    }
+    @media (min-width: $screen-md-min) {
+        opacity:1;
+    }
+}

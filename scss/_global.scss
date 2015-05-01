@@ -1,0 +1,72 @@
+/* Global Styles */
+
+body {
+	color: $body-color;
+	background-color: $body-bg-color;
+	line-height: $line-height;
+	font-size: $font-size;
+	font-family:$font-family;
+}
+
+
+// Titles
+h1, h2, h3, h4, h5, h6 {
+	color: $title-color;
+    text-transform: $title-transform;
+    font-family: $font-family-title;
+    letter-spacing: $title-letter-spacing;
+    font-weight: $title-font-weight;
+    a {
+    	color: $title-color;
+    }
+}
+h1 {
+	font-size: $font-size-h1;
+}
+h2 {
+	font-size: $font-size-h2;
+}
+h3 {
+	font-size: $font-size-h3;
+}
+h4 {
+	font-size: $font-size-h3 -2;
+}
+h5 {
+	font-size: $font-size-h3 -4;
+}
+
+
+// Links
+a {
+	color: $link-color;
+	text-decoration: $link-decoration;
+	&hover {
+		color: $link-hover-color;
+		text-decoration: $link-hover-decoration;
+	}
+}
+
+.menu {
+	padding: $menu-padding;
+	font-family: $menu-font-family;
+	list-style:none;
+
+	li {
+		a {
+			padding: $menu-item-padding;
+			font-size: $menu-font-size;
+			text-transform: $menu-item-transform;
+			letter-spacing: $menu-item-letter-spacing;
+    		font-weight: $menu-item-font-weight;
+			color: $menu-item-color;
+			background-color: $menu-item-background;
+			text-decoration: $menu-item-decoration;
+			&:hover {
+				color: $menu-item-hover-color;
+				background-color: $menu-item-hover-background;
+				text-decoration: $menu-item-hover-decoration;
+			}
+		}
+	}
+}

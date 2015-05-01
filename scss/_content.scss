@@ -1,0 +1,107 @@
+// Main wrapper
+// --------------------------------------------------
+.loader {
+	@media (min-width: $screen-md-min) {
+		opacity:1;
+		position:fixed;
+		width:100%;
+		height:100%;
+		background:$brand;
+		transition: all 01s;
+		z-index:9999;
+		.icon {
+			left: 73px;
+			top: 10px;
+			font-size:36px;
+			position: absolute;
+			color: $white;
+		}
+		&.loaded {
+			opacity:0;
+			z-index: -1;
+		}
+	}
+}
+#main {
+	background: $brand-light;
+	padding: $padding;
+	padding-bottom:80px;
+	padding-left: $sidebar-size;
+	display: inline-block;
+	width: 100%;
+	min-height: 100%;
+	transition: all 0.5s;
+	border: $brand 5px solid;
+	@media (max-width: $screen-md-max) {
+		padding-left: 20px;
+		padding-top: 80px;
+	}
+	@media (min-width: $screen-md-min) {
+		opacity:1;
+	}
+}
+.button {
+	display:block;
+	transition: $transition;
+	height:50px;
+	padding:0px 20px;
+	line-height: 50px;
+	text-transform: uppercase;
+	background: $brand;
+	color: $white;
+	border:0px;
+	font-size: 15px;
+	&.inline, .summary & {
+		height: 36px;
+		padding:0px 20px;
+		line-height: 36px;
+		margin-top: 10px;
+	}
+}
+.content {
+	float:left;
+	width:100%;
+}
+
+date {
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 0px;
+	font-weight: 600;
+	color:lighten($grey, 30%);
+	display:block;
+}
+h1, h2, h3, h4, h5, h6, p, img, date, ul, li, blockquote {
+	margin-bottom:20px;
+	text-align: left;
+}
+h1 {
+	margin-top: 23px;
+	background: #f6f6f6;
+	width: 100%;
+	@media (max-width: $screen-sm-max) {
+		font-size:22px;
+	}
+	span {
+		color: $brand;
+	}
+}
+h2 {
+	width: 100%;
+	text-align: left;
+}
+.entry-content p span {
+	float:right;
+	width:100%;
+	padding: 0px 0px 10px;
+	display:inline-block;
+}
+.alignleft {
+	float:left;
+	margin:0px 20px 20px 0px;
+}
+.alignright {
+	float:left;
+	margin:0px 20px 20px 0px;
+}
+
