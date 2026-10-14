@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <title>Alex Dankoff | Flux de travail IA bâtis en une heure | Montréal</title>
+  <meta name="description" content="Séances de travail d&rsquo;une heure qui automatisent un flux réel et font récupérer des heures à votre équipe, chaque semaine. Mise en œuvre concrète, pas des diapositives. Sur place à Montréal, Ottawa et Toronto.">
+  <link rel="canonical" href="https://adankoff.github.io/fr/">
+  <link rel="alternate" hreflang="en" href="https://adankoff.github.io/">
+  <link rel="alternate" hreflang="fr" href="https://adankoff.github.io/fr/">
+  <link rel="alternate" hreflang="x-default" href="https://adankoff.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alex Dankoff | Flux de travail IA bâtis en une heure | Montréal">
+  <meta property="og:description" content="Séances de travail d&rsquo;une heure qui automatisent un flux réel et font récupérer des heures à votre équipe, chaque semaine. Mise en œuvre concrète, pas des diapositives.">
+  <meta property="og:url" content="https://adankoff.github.io/fr/">
+  <meta property="og:site_name" content="Alex Dankoff">
+  <meta property="og:locale" content="fr_CA">
+  <meta property="og:image" content="https://adankoff.github.io/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alex Dankoff | Flux de travail IA bâtis en une heure">
+  <meta name="twitter:description" content="Séances de travail d&rsquo;une heure qui automatisent un flux réel et font récupérer des heures à votre équipe, chaque semaine. Mise en œuvre concrète, pas des diapositives.">
+  <meta name="twitter:image" content="https://adankoff.github.io/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alex Dankoff",
+    "url": "https://adankoff.github.io",
+    "jobTitle": "Consultant, formateur et bâtisseur en IA",
+    "description": "Enseigne aux équipes et aux organisations de toutes tailles comment utiliser l’IA. Basé à Montréal.",
+    "knowsAbout": ["Formation en IA", "Consultation en IA", "Flux de travail IA", "Leadership en ingénierie"],
+    "address": { "@type": "PostalAddress", "addressLocality": "Montreal", "addressRegion": "QC", "addressCountry": "CA" },
+    "sameAs": ["https://www.linkedin.com/in/alexdankoff/"]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Reset ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --t-cream:    #FAF9F5;
+      --t-cream-2:  #F2EEE3;
+      --t-ink:      #141413;
+      --t-ink-warm: #3E3D39;
+      --t-orange:   #DA7756;      /* dark backgrounds + decorative only */
+      --t-orange-2: #9E3F21;      /* text on cream: AA at small sizes */
+      --t-orange-deep: #B0492A;   /* button fills: 5.48:1 vs white */
+      --t-border:   #E3DFD1;
+      --t-dark:     #1A1915;
+      --t-dark-2:   #2A2824;
+      --font-serif: 'Source Serif 4', Georgia, serif;
+      --font-logo:  'Fraunces', 'Source Serif 4', Georgia, serif;
+      --font-body:  'Inter', system-ui, sans-serif;
+      --font-mono:  'JetBrains Mono', monospace;
+      --font-hand:  'Caveat', cursive;
+    }
+    html { font-size: 16px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: var(--font-body);
+      color: var(--t-ink);
+      background: var(--t-cream);
+      line-height: 1.6;
+    }
+    a { color: var(--t-orange-2); text-decoration: none; transition: color 0.15s; }
+    a:hover { color: var(--t-orange); }
+    img { max-width: 100%; display: block; }
+
+    /* ===== Layout ===== */
+
+    /* Header/nav/footer now use style.css: no overrides here */
+
+    /* ===== Hero (split column): bumped padding-top to clear fixed header ===== */
+    .t-hero { padding: 9rem 0 4rem; }
+    .t-hero__grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .t-hero__eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--t-orange-2);
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+    .t-hero h1 {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-variation-settings: "opsz" 144;
+      font-size: 4.5rem;
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      color: var(--t-ink);
+      margin-bottom: 1.5rem;
+    }
+    .t-hero__sub {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      color: var(--t-ink-warm);
+      margin-bottom: 2rem;
+      max-width: 52ch;
+    }
+    .t-hero__cta {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      align-items: center;
+    }
+    .t-btn {
+      display: inline-block;
+      padding: 0.85rem 1.6rem;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+      letter-spacing: -0.005em;
+    }
+    .t-btn--primary {
+      background: var(--t-orange-deep);
+      color: white !important;
+    }
+    .t-btn--primary:hover { background: var(--t-orange-2); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(218, 119, 86, 0.38); }
+    .t-btn--ghost {
+      color: var(--t-ink) !important;
+      border: 1.5px solid var(--t-ink);
+      background: transparent;
+    }
+    .t-btn--ghost:hover { background: var(--t-ink); color: var(--t-cream) !important; transform: translateY(-2px); box-shadow: 0 10px 28px rgba(20, 20, 19, 0.22); }
+    .t-hero__meta {
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--t-ink-warm);
+      opacity: 0.7;
+    }
+    .t-hero__photo {
+      aspect-ratio: 4 / 5;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 30px 50px -20px rgba(20, 20, 19, 0.25), 0 2px 6px rgba(20, 20, 19, 0.06);
+      position: relative;
+    }
+    .t-hero__photo::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(218, 119, 86, 0.06) 100%);
+      pointer-events: none;
+    }
+    .t-hero__photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      filter: grayscale(0.08) contrast(1.04) brightness(1.02);
+    }
+
+    /* ===== Signed letter ===== */
+    .t-letter {
+      padding: 6.5rem 0;
+      background: var(--t-cream-2);
+      border-top: 1px solid var(--t-border);
+      border-bottom: 1px solid var(--t-border);
+    }
+    .t-letter__inner { max-width: 680px; margin: 0 auto; padding: 0 2rem; }
+    .t-letter__greeting {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 2rem;
+      color: var(--t-orange-2);
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+    }
+    .t-letter p {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      line-height: 1.75;
+      color: var(--t-ink);
+      margin-bottom: 1.25rem;
+      font-weight: 400;
+      font-variation-settings: "opsz" 72;
+    }
+    .t-letter p:first-of-type::first-letter {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 4.5rem;
+      float: left;
+      line-height: 0.85;
+      padding: 0.3rem 0.6rem 0 0;
+      color: var(--t-orange-2);
+      font-weight: 500;
+      font-variation-settings: "opsz" 144;
+    }
+    .t-letter__sig {
+      margin-top: 2.5rem;
+      font-family: var(--font-hand);
+      font-size: 2.75rem;
+      font-weight: 600;
+      color: var(--t-orange-2);
+      line-height: 1;
+      transform: rotate(-3deg);
+      display: inline-block;
+      margin-left: -0.2rem;
+    }
+
+    /* ===== Featured essay (dark slab) ===== */
+    .t-featured {
+      background: var(--t-dark);
+      color: var(--t-cream);
+      padding: 5rem 0;
+    }
+    .t-featured__grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .t-featured__quote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 2.5rem;
+      line-height: 1.25;
+      color: var(--t-cream);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+    .t-featured__label {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--t-orange);
+      margin-bottom: 1rem;
+    }
+    .t-featured__card {
+      padding: 1.75rem;
+      border: 1px solid #3a3834;
+      border-radius: 12px;
+      background: var(--t-dark-2);
+    }
+    .t-featured__card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: var(--t-cream);
+      margin-bottom: 0.75rem;
+      line-height: 1.25;
+      font-weight: 500;
+    }
+    .t-featured__card p {
+      font-size: 0.95rem;
+      color: #b8ac98;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .t-featured__card a {
+      color: var(--t-orange);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    /* ===== Archive ===== */
+    .t-archive { padding: 5rem 0; }
+    .t-archive__label {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--t-orange-2);
+      margin-bottom: 1.25rem;
+    }
+    .t-archive h2 {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      font-weight: 700;
+      font-variation-settings: "opsz" 144;
+      letter-spacing: -0.025em;
+      margin-bottom: 3rem;
+    }
+    .t-archive__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .t-archive__card {
+      padding: 1.75rem;
+      background: var(--t-cream-2);
+      border: 1px solid var(--t-border);
+      border-radius: 12px;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+    .t-archive__card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(20, 20, 19, 0.06);
+      border-color: var(--t-orange);
+    }
+    .t-archive__card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1.3;
+      color: var(--t-ink);
+      margin-bottom: 0.75rem;
+    }
+    .t-archive__card p {
+      font-size: 0.95rem;
+      color: var(--t-ink-warm);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .t-archive__meta {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--t-ink-warm);
+      opacity: 0.6;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .t-archive__all { margin-top: 2.5rem; }
+    .t-archive__all a { font-weight: 600; color: var(--t-orange-2); }
+
+    /* ===== How I teach ===== */
+    .t-teach { padding: 5rem 0; }
+    .t-teach h2 {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      font-weight: 400;
+      font-variation-settings: "opsz" 144;
+      letter-spacing: -0.025em;
+      margin-bottom: 3rem;
+    }
+    .t-teach__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .t-teach__card {
+      text-align: left;
+      padding: 2rem 0;
+      border-top: 2px solid var(--t-ink);
+      transition: border-color 0.2s;
+    }
+    .t-teach__card:hover { border-top-color: var(--t-orange); }
+    .t-teach__num {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 3.5rem;
+      color: var(--t-orange);
+      opacity: 0.55;
+      line-height: 1;
+      margin-bottom: 1rem;
+      letter-spacing: -0.025em;
+      font-variation-settings: "opsz" 144;
+    }
+    .t-teach__card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+      font-variation-settings: "opsz" 72;
+      color: var(--t-ink);
+    }
+    .t-teach__card p {
+      font-size: 0.97rem;
+      color: var(--t-ink-warm);
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+    .t-teach__link {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      display: inline-block;
+      padding: 0.4rem 0;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--t-orange-2);
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .t-teach__link:hover { color: var(--t-orange); }
+
+    /* ===== Closing CTA ===== */
+    .t-closing {
+      background: var(--t-dark);
+      color: var(--t-cream);
+      text-align: center;
+      padding: 4rem 0;
+    }
+    .t-closing h2 {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1.3;
+      color: var(--t-cream);
+      max-width: 26ch;
+      margin: 0 auto 0.9rem;
+    }
+    .t-closing__sub { color: rgba(250, 249, 245, 0.68); font-size: 1rem; margin: 0 auto 1.75rem; }
+
+    /* ===== Working session offer ===== */
+    .t-offer {
+      padding: 5.5rem 0;
+      background: var(--t-cream);
+      border-top: 1px solid var(--t-border);
+    }
+    .t-offer__inner { max-width: 1040px; margin: 0 auto; padding: 0 2rem; }
+    .t-offer__label {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--t-orange-2);
+      margin-bottom: 1.25rem;
+    }
+    .t-offer h2 {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--t-ink);
+      margin-bottom: 3rem;
+      max-width: 22ch;
+      font-weight: 700;
+      font-variation-settings: "opsz" 144;
+    }
+    .t-offer__steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+    .t-offer__step {
+      border-top: 2px solid var(--t-ink);
+      padding-top: 1.25rem;
+    }
+    .t-offer__num {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      letter-spacing: 0.16em;
+      color: var(--t-orange-2);
+      margin-bottom: 0.8rem;
+      font-weight: 500;
+    }
+    .t-offer__step h3 {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      line-height: 1.25;
+      color: var(--t-ink);
+      margin-bottom: 0.7rem;
+      font-weight: 600;
+    }
+    .t-offer__step p {
+      font-size: 0.98rem;
+      color: var(--t-ink-warm);
+      line-height: 1.6;
+    }
+    .t-offer__guarantee {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border: 1.5px solid var(--t-orange-2);
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--t-orange-2);
+      margin-right: 1rem;
+      margin-bottom: 0.5rem;
+      vertical-align: middle;
+    }
+    .t-offer__cta {
+      margin-top: 1rem;
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* ===== Wall of testimonials ===== */
+    .t-wall {
+      padding: 5.5rem 0;
+      background: var(--t-cream-2);
+      border-top: 1px solid var(--t-border);
+      border-bottom: 1px solid var(--t-border);
+    }
+    .t-wall__label {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--t-orange-2);
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+    .t-wall__heading {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 2rem;
+      letter-spacing: -0.01em;
+      color: var(--t-ink);
+      text-align: center;
+      margin-bottom: 3rem;
+      font-variation-settings: "opsz" 96;
+    }
+    .t-wall__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+    .t-wall__card {
+      background: var(--t-cream);
+      border: 1px solid var(--t-border);
+      border-radius: 14px;
+      padding: 2rem 2.25rem;
+      margin: 0;
+      position: relative;
+    }
+    .t-wall__card::before {
+      content: "\201C";
+      position: absolute;
+      top: 0.4rem;
+      left: 1.4rem;
+      font-family: var(--font-serif);
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--t-orange);
+      opacity: 0.3;
+    }
+    .t-wall__card blockquote {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      line-height: 1.55;
+      color: var(--t-ink);
+      margin: 0 0 1.5rem 0;
+      font-weight: 400;
+      position: relative;
+      z-index: 1;
+    }
+    .t-wall__card figcaption {
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid var(--t-border);
+      padding-top: 1rem;
+    }
+    .t-wall__name {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      color: var(--t-ink);
+      font-size: 1rem;
+    }
+    .t-wall__role {
+      font-size: 0.85rem;
+      color: var(--t-ink-warm);
+      font-family: var(--font-mono);
+      margin-top: 0.15rem;
+      letter-spacing: 0.02em;
+    }
+
+    /* Footer now uses style.css */
+
+    @media (max-width: 1100px) and (min-width: 841px) {
+      .t-teach__grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 840px) {
+      .t-hero__grid { grid-template-columns: 1fr; gap: 2rem; }
+      .t-hero h1 { font-size: 2.5rem; }
+      .t-featured__grid { grid-template-columns: 1fr; gap: 2rem; }
+      .t-featured__quote { font-size: 1.5rem; }
+      .t-archive__grid, .t-teach__grid { grid-template-columns: 1fr; }
+      .t-teach__card { padding: 1.5rem 0; }
+      .t-offer__steps { grid-template-columns: 1fr; gap: 2rem; }
+      .t-offer h2 { font-size: 1.85rem; }
+      .t-wall__grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .t-wall__heading { font-size: 1.55rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header (standard, matches all other pages) -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo"><span class="header__logo__mark">AD</span><span class="header__logo__name">Alex Dankoff</span></a>
+      <button class="nav-toggle" aria-label="Basculer la navigation" aria-expanded="false" aria-controls="main-nav" onclick="var n=document.querySelector(&quot;.nav&quot;);var o=n.classList.toggle(&quot;nav--open&quot;);this.setAttribute(&quot;aria-expanded&quot;,o)">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="main-nav">
+        <a href="about.html" class="nav__link">À propos</a>
+        <a href="services.html" class="nav__link">Services</a>
+        <a href="workshops.html" class="nav__link">Ateliers</a>
+        <a href="../demos.html" class="nav__link">Démos</a>
+        <a href="verticals/" class="nav__link">Secteurs</a>
+        <a href="../" class="nav__link nav__lang" hreflang="en" aria-label="English">EN</a>
+        <a href="contact.html" class="nav__cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="t-hero">
+    <div class="container t-hero__grid">
+      <div>
+        <h1>Pas un plan stratégique. Un système qui fonctionne.</h1>
+        <p class="t-hero__sub">La plupart des conseils en IA s&rsquo;arrêtent à une présentation. Je bâtis le système avec votre équipe, sur vos vrais flux de travail, pour que vous puissiez compter les heures qu&rsquo;il vous redonne.</p>
+        <div class="t-hero__cta">
+          <a href="https://calendly.com/alex-dankoff/screening-call" class="t-btn t-btn--primary">Réserver un appel</a>
+          <a href="#how-it-works" class="t-btn t-btn--ghost">Voir comment ça marche</a>
+        </div>
+      </div>
+      <div class="t-hero__photo">
+        <img src="../img/alex.jpeg" alt="Alex Dankoff" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Working session offer -->
+  <section class="t-offer" id="how-it-works">
+    <div class="t-offer__inner" data-animate="fade-up">
+      <div class="t-offer__label">Comment ça marche</div>
+      <h2>Une heure. Un flux de travail. Des résultats qui restent.</h2>
+      <div class="t-offer__steps">
+        <div class="t-offer__step" data-animate="fade-up" style="--anim-delay:0s">
+          <div class="t-offer__num">01 &middot; Le point de blocage</div>
+          <h3>Dites-moi ce qui traîne</h3>
+          <p>Un rapport hebdomadaire. Une présélection de candidats. Des résumés de contrats. Des briefs de contenu. Tout ce qui gruge des heures chaque semaine. J&rsquo;arrive préparé.</p>
+        </div>
+        <div class="t-offer__step" data-animate="fade-up" style="--anim-delay:0.1s">
+          <div class="t-offer__num">02 &middot; On bâtit ensemble</div>
+          <h3>On le construit en direct</h3>
+          <p>Soixante minutes, en partage d&rsquo;écran ou dans vos bureaux à Montréal, Ottawa ou Toronto (tarif sur demande). Je choisis l&rsquo;outil, j&rsquo;écris les prompts, je bâtis l&rsquo;automatisation. Vous regardez, vous posez vos questions et vous repartez avec un système qui fonctionne, que vous possédez.</p>
+        </div>
+        <div class="t-offer__step" data-animate="fade-up" style="--anim-delay:0.2s">
+          <div class="t-offer__num">03 &middot; À vous de le garder</div>
+          <h3>Un système qui fonctionne, à vous</h3>
+          <p>Vous quittez l&rsquo;appel avec l&rsquo;automatisation construite, testée et en marche sur les outils que vous utilisez déjà. Aucuns frais de licence, aucune dépendance à un fournisseur. Juste un système qui fait gagner du temps à votre équipe, chaque semaine à partir de maintenant.</p>
+        </div>
+      </div>
+      <div class="t-offer__cta" data-animate="fade-up" style="--anim-delay:0.3s">
+        <span class="t-offer__guarantee">Construit en direct &middot; À vous de le garder</span>
+        <a href="https://calendly.com/alex-dankoff/screening-call" class="t-btn t-btn--primary">Réserver un appel</a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- How I teach (editorial numerals, no photo repeats) -->
+  <section class="t-teach">
+    <div class="container">
+      <h2 data-animate="fade-up">Trois façons de collaborer</h2>
+      <div class="t-teach__grid">
+        <div class="t-teach__card" data-animate="fade-up" style="--anim-delay:0s">
+          <div class="t-teach__num">01</div>
+          <h3>La séance de travail</h3>
+          <p>Une heure, en partage d&rsquo;écran ou sur place à Montréal, Ottawa ou Toronto. Nous automatisons ensemble l&rsquo;un de vos vrais flux de travail. Vous repartez avec un système qui fonctionne et qui fait gagner du temps à votre équipe, chaque semaine.</p>
+          <a href="https://calendly.com/alex-dankoff/screening-call" class="t-teach__link">Réserver un appel</a>
+        </div>
+        <div class="t-teach__card" data-animate="fade-up" style="--anim-delay:0.08s">
+          <div class="t-teach__num">02</div>
+          <h3>Ateliers privés</h3>
+          <p>Sessions d&rsquo;une demi-journée à deux jours, bâties autour du travail réel de votre équipe&nbsp;: documents, tableurs, processus. À Montréal, à Ottawa, à Toronto ou à distance.</p>
+          <a href="workshops.html" class="t-teach__link">Voir les ateliers &rarr;</a>
+        </div>
+        <div class="t-teach__card" data-animate="fade-up" style="--anim-delay:0.16s">
+          <div class="t-teach__num">03</div>
+          <h3>Consultation et Orchestra Toolkit</h3>
+          <p>Conception, construction et déploiement concrets, menés personnellement par moi. Propulsé par l&rsquo;Orchestra Toolkit que j&rsquo;utilise pour mener ma propre pratique.</p>
+          <a href="services.html" class="t-teach__link">Voir les mandats &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Closing -->
+  <section class="t-closing">
+    <div class="container container--narrow" data-animate="scale-in">
+      <h2>Vous ne savez pas par où commencer&nbsp;? Apportez-moi un flux de travail.</h2>
+      <p class="t-closing__sub">Un appel gratuit de 30 minutes. Nous trouverons celui qui vaut la peine d&rsquo;être automatisé en premier.</p>
+      <a href="https://calendly.com/alex-dankoff/screening-call" class="t-btn t-btn--primary">Réserver un appel</a>
+    </div>
+  </section>
+
+  <!-- Footer (standard, matches all other pages) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">Alex <span>Dankoff</span></div>
+          <p class="footer__desc">J&rsquo;aide les équipes et les organisations de toutes tailles à économiser du temps et de l&rsquo;argent grâce à l&rsquo;IA. Ateliers privés, consultation et l&rsquo;Orchestra Toolkit. Basé à Montréal, à distance partout au Canada, sur place à Montréal, Ottawa et Toronto.</p>
+        </div>
+        <div>
+          <div class="footer__heading">Site</div>
+          <ul class="footer__links">
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__heading">Offres</div>
+          <ul class="footer__links">
+            <li><a href="services.html">Consultation</a></li>
+            <li><a href="workshops.html">Ateliers</a></li>
+            <li><a href="../demos.html">Démos</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__heading">Contact</div>
+          <ul class="footer__links">
+            <li><a href="https://www.linkedin.com/in/alexdankoff/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="mailto:a.dankoff@gmail.com">Courriel</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Alex Dankoff. Tous droits réservés.</span>
+        <a href="privacy.html" style="color:rgba(255,255,255,0.5);">Politique de confidentialité</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/header-scroll.js" defer></script>
+  <script src="/js/animations.js" defer></script>
+</body>
+</html>
