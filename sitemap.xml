@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://alex.dankoff.ca/</loc>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alex.dankoff.ca/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/"/>
+  </url>
+  <url>
+    <loc>https://alex.dankoff.ca/about.html</loc>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alex.dankoff.ca/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/about.html"/>
+  </url>
+  <url>
+    <loc>https://alex.dankoff.ca/services.html</loc>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/services.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alex.dankoff.ca/fr/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/services.html"/>
+  </url>
+  <url>
+    <loc>https://alex.dankoff.ca/workshops.html</loc>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/workshops.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alex.dankoff.ca/fr/workshops.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/workshops.html"/>
+  </url>
+  <url>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/product.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alex.dankoff.ca/fr/product.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/product.html"/>
+  </url>
+  <url>
+    <loc>https://alex.dankoff.ca/contact.html</loc>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alex.dankoff.ca/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/contact.html"/>
+  </url>
+  <url>
+    <loc>https://alex.dankoff.ca/verticals/</loc>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/verticals/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alex.dankoff.ca/fr/verticals/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/verticals/"/>
+  </url>
+  <url>
+    <loc>https://alex.dankoff.ca/verticals/accounting-tax.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/verticals/accounting-tax.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alex.dankoff.ca/fr/verticals/accounting-tax.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/verticals/accounting-tax.html"/>
+  </url>
+  <url>
+    <loc>https://alex.dankoff.ca/verticals/construction.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/verticals/construction.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alex.dankoff.ca/fr/verticals/construction.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/verticals/construction.html"/>
+  </url>
+  <url>
+    <loc>https://alex.dankoff.ca/verticals/consulting.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/verticals/consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alex.dankoff.ca/fr/verticals/consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/verticals/consulting.html"/>
+  </url>
+  <url>
+    <loc>https://alex.dankoff.ca/verticals/ecommerce-retail.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/verticals/ecommerce-retail.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alex.dankoff.ca/fr/verticals/ecommerce-retail.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/verticals/ecommerce-retail.html"/>
+  </url>
+  <url>
+    <loc>https://alex.dankoff.ca/verticals/finance.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/verticals/finance.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alex.dankoff.ca/fr/verticals/finance.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/verticals/finance.html"/>
+  </url>
+  <url>
+    <loc>https://alex.dankoff.ca/verticals/healthcare.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/verticals/healthcare.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alex.dankoff.ca/fr/verticals/healthcare.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/verticals/healthcare.html"/>
+  </url>
+  <url>
+    <loc>https://alex.dankoff.ca/verticals/hr-recruiting.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/verticals/hr-recruiting.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alex.dankoff.ca/fr/verticals/hr-recruiting.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/verticals/hr-recruiting.html"/>
+  </url>
+  <url>
+    <loc>https://alex.dankoff.ca/verticals/insurance.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/verticals/insurance.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alex.dankoff.ca/fr/verticals/insurance.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/verticals/insurance.html"/>
+  </url>
+  <url>
+    <loc>https://alex.dankoff.ca/verticals/law.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/verticals/law.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alex.dankoff.ca/fr/verticals/law.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/verticals/law.html"/>
+  </url>
+  <url>
+    <loc>https://alex.dankoff.ca/verticals/marketing-agencies.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/verticals/marketing-agencies.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alex.dankoff.ca/fr/verticals/marketing-agencies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/verticals/marketing-agencies.html"/>
+  </url>
+  <url>
+    <loc>https://alex.dankoff.ca/verticals/media-content.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/verticals/media-content.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alex.dankoff.ca/fr/verticals/media-content.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/verticals/media-content.html"/>
+  </url>
+  <url>
+    <loc>https://alex.dankoff.ca/verticals/real-estate.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/verticals/real-estate.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alex.dankoff.ca/fr/verticals/real-estate.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/verticals/real-estate.html"/>
+  </url>
+  <url>
+    <loc>https://alex.dankoff.ca/privacy.html</loc>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alex.dankoff.ca/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://alex.dankoff.ca/demos.html</loc>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/demos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/demos.html"/>
+  </url>
+  <url>
+    <loc>https://alex.dankoff.ca/demos-mcp.html</loc>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alex.dankoff.ca/demos-mcp.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alex.dankoff.ca/demos-mcp.html"/>
+  </url>
+</urlset>

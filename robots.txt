@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+# Not indexed: this site is shared by link.
